@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <table class="table">
+        <caption class="table__header">
+            <h1>Click on price header to reverse sorting order</h1>
+        </caption>
+        <tr class="table__row table__head">
+            <th class="table__cell">
+                <h2 data-sort-key="name">Name</h2>
+            </th>
+            <th  class="table__cell header">
+                <h2 @click="sortCol" data-sort-key="price">Price</h2>
+            </th>
+        </tr>
+        <tbody class="table__content">
+            <tr v-for="product in products" class="table__row">
+                <td class="table__cell">{{product.name}}</td>
+                <td class="table__cell">{{product.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
